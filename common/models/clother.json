@@ -1,0 +1,37 @@
+{
+  "name": "Clother",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "age": {
+      "type": "number"
+    },
+    "position": {
+      "type": "geopoint"
+    },
+    "direction": {
+      "type": "Direction"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "directions": {
+      "type": "hasMany",
+      "model": "Direction",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "seats": {
+      "type": "hasMany",
+      "model": "Seat",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
